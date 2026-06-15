@@ -1,5 +1,5 @@
 [Unit]
-Description=FilebBowser Quantum
+Description=FileBrowser Quantum
 Documentation=https://filebrowserquantum.com/en/docs/
 After=network.target
 
@@ -10,6 +10,9 @@ Restart=always
 RestartSec=10
 User=filebrowser
 Group=filebrowser
+ProtectHome=true
+ProtectSystem=strict
+StateDirectory=filebrowser/
 WorkingDirectory=/var/lib/filebrowser
 
 [Install]
