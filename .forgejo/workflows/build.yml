@@ -1,0 +1,28 @@
+on: [push]
+
+env:
+  RUNNER_VERSION: 1.5.0-beta
+
+jobs:
+  package:
+    name: package ${{matrix.dist}} ${{ matrix.arch }}
+    runs-on: ${{ matrix.arch }}
+    strategy:
+      matrix:
+        arch: [amd64, arm64]
+        dist: [noble]
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+            persist-credentials: false
+
+      - name: "Launch earthly"
+        run: earthly +package --DISTRIBUTION=${{ matrix.dist }} --FILEBROWSER_VERSION=${RUNNER_VERSION}
+
+      - uses: ${{ vars.deploy }}
+        with:
+          type: complex
+          path: public
+          component: main
+          key: ${{ secrets.deploy_key }}

@@ -1,0 +1,16 @@
+[Unit]
+Description=FilebBowser Quantum
+Documentation=https://filebrowserquantum.com/en/docs/
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/filebrowser-quantum -c /etc/filebrowser.yml
+Restart=always
+RestartSec=10
+User=filebrowser
+Group=filebrowser
+WorkingDirectory=/var/lib/filebrowser
+
+[Install]
+WantedBy=multi-user.target

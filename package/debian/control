@@ -1,0 +1,13 @@
+Source: filebrowser-quantum
+Section: misc
+Priority: optional
+Build-Depends: build-essential, debhelper (>= 9), dh-exec
+Maintainer: Dan Parnham <dan@emergent-design.co.uk>
+
+Package: filebrowser-quantum
+Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ffmpeg
+Description: Self-hosted file browsing application
+ This package provides installation of official releases
+ as a system service.

@@ -1,0 +1,4 @@
+#!/usr/bin/dh-exec
+
+filebrowser-quantum usr/bin/
+filebrowser.yml /etc/
