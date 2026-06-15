@@ -22,7 +22,7 @@ binary:
 	dh_makeshlibs
 	dh_shlibdeps
 	dh_installsysusers
-	dh_installsystemd --no-enable
+	dh_installsystemd
 	dh_installtmpfiles
 	dh_installdeb
 	dh_gencontrol -- -v"$(DEB_VERSION)~$(DISTRIBUTION)"
