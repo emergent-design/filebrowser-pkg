@@ -12,7 +12,7 @@ User=filebrowser
 Group=filebrowser
 ProtectHome=true
 ProtectSystem=strict
-StateDirectory=filebrowser/
+StateDirectory=filebrowser/ filebrowser/sources/
 WorkingDirectory=/var/lib/filebrowser
 
 [Install]

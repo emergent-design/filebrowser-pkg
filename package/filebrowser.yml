@@ -1,8 +1,11 @@
 server:
   port: 80
-  sources:
+  database: "/var/lib/filebrowser/filebrowser.db"
+  cacheDir: "/var/lib/filebrowser/tmp"
+  #sources:
     # Do not use a root "/" directory or include the "/var" folder
-    # - path: "/srv/filebrowser/documentation"
+    # - path: "/var/lib/filebrowser/sources/documentation"
+    #   name: "Documentation"
     #   config:
     #     defaultEnabled: true
 
