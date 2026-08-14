@@ -1,8 +1,8 @@
 on: [push]
 
 env:
-  FILEBROWSER_VERSION: 1.5.1-beta
-  DOWNSTREAM: 3
+  FILEBROWSER_VERSION: 2.0.0-beta
+  DOWNSTREAM: 1
 
 jobs:
   package:
